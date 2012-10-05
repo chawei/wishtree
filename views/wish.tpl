@@ -11,12 +11,12 @@
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/i/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
+  <title>Wishtree</title>
   <meta name="description" content="">
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/app.css">
   <!-- More ideas for your head here: h5bp.com/d/head-Tips -->
   
   <!-- Want to try a different theme?
@@ -27,7 +27,7 @@
   <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="/extras/h5bp/js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="js/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -37,65 +37,61 @@
   	<p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
   <![endif]-->
 
-
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
- 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
- 
-      <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">Project name</a>
- 
-      <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse">
-        <!-- .nav, .navbar-search, .navbar-form, etc -->
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- Be sure to leave the brand out there if you want it shown -->
+        <a class="brand" href="/">wishtree</a>
       </div>
- 
     </div>
   </div>
-</div>
 
-<div class="container">  
-  <header class="jumbotron subhead" id="overview">
-      <div  class="row">
-        <img class = "span1" src="{{result['user']['avatar']['url']}}">
-        <h3 class = "span5"> {{result['user']['nickname']}} wished : {{result['title']}} </h3>
-      </div>
-  </header>
-
+  <div id="main">
+    <div class="container">  
+      <header id="overview" class="cf">
+        <div class="inner">
+          <div class="desc">
+            <div class="image">
+              <img src="{{result['user']['avatar']['url']}}">
+            </div>
+            <h3>{{result['user']['nickname']}} wished : {{result['title']}}</h3>
+          </div>
+          <div class="transparent-bg"></div>
+        </div>
+      </header>
       
-      <div class="row">
-        <img class = "span1 offset5" src="{{result['treeState']['photoFile']['url']}}" style='z-index:2;position:absolute;' >
-        <img class = "span6" src="{{result['image']['url']}}" style='z-index:1'>
+      <div class="storyline">
+        <div class="story cf">
+          <div class="image">
+            <img class ="icon" src="{{result['treeState']['photoFile']['url']}}">
+            <img class ="uploaded-img" src="{{result['image']['url']}}">
+          </div>
+          
+          <h4 class="title">{{result['description']}}</h4>
+        </div>
+        
+        %for photo in result['photoList'] :
+        <div class="story cf">
+          <div class="image">
+            <img class ="icon" src="{{photo['treeState']['photoFile']['url']}}">
+            <img class ="uploaded-img" src="{{photo['image']['url']}}">
+          </div>
+          
+          <h4 class="title">{{photo['description']}}</h4>
+        </div>
+        %end
       </div>
-      <div class="row">
-        <h5 class="span6">{{result['description']}}</h5>
-      </div>
-
-      %for photo in result['photoList'] :
-      <div class="row">
-        <img class = "span1 offset5" src="{{photo['treeState']['photoFile']['url']}}" style='z-index:2;position:absolute;' >
-        <img class = "span6" src="{{photo['image']['url']}}" style='z-index:1'>
-      </div>
-      <div class="row">
-        <h5 class="span6">{{photo['description']}}</h5>
-      </div>
-      %end
+      
+    </div>
+  </div>
   
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/extras/h5bp/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
   <!-- scripts concatenated and minified via ant build script-->
-  <script src="/extras/prettify/prettify.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
+  <script src="js/prettify/prettify.js"></script>
   
   <!-- end scripts-->
   
@@ -103,7 +99,7 @@
   <!--script type="text/javascript" src="/js/bootstrap-alert.min.js"></script-->
   <!--script type="text/javascript" src="/js/bootstrap-button.min.js"></script-->
   <!--script type="text/javascript" src="/js/bootstrap-carousel.min.js"></script-->
-  <script type="text/javascript" src="/js/bootstrap-collapse.min.js"></script>
+  <!--script type="text/javascript" src="/js/bootstrap-collapse.min.js"></script-->
   <!--script type="text/javascript" src="/js/bootstrap-dropdown.min.js"></script-->
   <!--script type="text/javascript" src="/js/bootstrap-modal.min.js"></script-->
   <!--script type="text/javascript" src="/js/bootstrap-modal.min.js"></script-->
@@ -127,16 +123,14 @@
 
     });
   </script>
+  
   <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
-    <footer>
-    <p><i class="icon-github-sign"></i> Built with <a href="http://ajkochanowicz.github.com/Kickstrap/">Kickstrap</a></p>
-  </footer>
-</div>
+  
   <!-- A little ie7- magic -->
   <script type="text/javascript"> $(function(){if($.browser.msie&&parseInt($.browser.version,10)===6){$('.row div[class^="span"]:last-child').addClass("last-child");$('[class="span"]').addClass("margin-left-20");$(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");$(":checkbox").addClass("input-checkbox");$('[class^="icon-"], [class=" icon-"]').addClass("icon-sprite");$(".pagination li:first-child a").addClass("pagination-first-child")}}) </script>
 </body>

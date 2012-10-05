@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(252, 249, 233);
+}
+
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background-color: #F2B361;
+  text-align: center;
+  -moz-box-shadow: inset 0 0 5px #B85621;
+  -webkit-box-shadow: inset 0 0 5px #B85621;
+  box-shadow: inner 0 0 5px #B85621;
+  z-index: 10;
+}
+
+.navbar .container {
+  margin: 6px auto;
+  width: 600px;
+  text-align: left;
+}
+
+.navbar .brand {
+  text-indent: -1000px;
+  background: url(/static/img/logo.png) 0 0;
+  width: 100px;
+  height: 23px;
+  display: inline-block;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  padding: 20px 0;
+}
+
+#main .container {
+  margin: auto;
+  width: 600px;
+  text-align: left;
+}
+
+#overview {
+  margin: 0 0 20px -5px;
+  position: fixed;
+  z-index: 100;
+}
+
+#overview .inner {
+  position: relative;
+  width: 700px;
+  height: 100px;
+}
+
+#overview .desc {
+  position: absolute;
+  z-index: 10;
+  margin: 20px 0 0 5px;
+}
+
+  #overview .image {
+    width: 50px;
+    float: left;
+  }
+
+    #overview img {
+      width: 50px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+  #overview h3 {
+    float: left;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #ed9b1d;
+  }
+
+#overview .transparent-bg {
+  position: absolute;
+  background: rgb(252, 249, 233);
+  opacity: 0.95;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.storyline {
+  position: absolute;
+  top: 125px;
+}
+
+.story {
+  margin: 0 0 20px 0;
+  padding: 30px 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+
+.story .title {
+  padding: 10px 0px;
+  1background: rgb(252, 249, 233);
+  font-weight: normal;
+  color: #5f3f0e;
+}
+
+.story .image {
+  position: relative;
+}
+
+.story .icon {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 10px;
+  
+}
+
+.story .uploaded-img {
+  z-index: 1;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 1px #aaa;
+}
+
+/* float clearing for IE6 */
+* html .cf{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .cf{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.cf:after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
