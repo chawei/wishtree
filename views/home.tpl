@@ -11,7 +11,23 @@
   <title>Wishtree</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="/css/app.css">
+  
+  <style>@import url("//fonts.googleapis.com/css?family=Nunito:300normal,400normal,700normal&subset=latin&directory&text=+%2C-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&directory");</style>
 </head>
-<body>
+<body id="homepage">
+  <div class="main_container">
+    <div class="main cf">
+      <section class="left_container">
+        <h1 id="logo">Wishtree</h1>
+        <h2 class="slogan Nunito-normal-400">Make a wish. Grow your story.</h2>
+      
+        <a class="app-store-badge" href="#"></a>
+      </section>
+    
+      <div id="iphone">
+        <img src="/static/img/wishtree-on-iphone.png" />
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -27,7 +27,9 @@
   <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/modernizr-2.5.3.min.js"></script>
+  <script src="/static/js/modernizr-2.5.3.min.js"></script>
+  
+  <style>@import url("//fonts.googleapis.com/css?family=Nunito:300normal,400normal,700normal&subset=latin&directory&text=+%2C-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&directory");</style>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -41,7 +43,7 @@
     <div class="navbar-inner">
       <div class="container">
         <!-- Be sure to leave the brand out there if you want it shown -->
-        <a class="brand" href="/">wishtree</a>
+        <a class="brand" href="/">Wishtree</a>
       </div>
     </div>
   </div>
@@ -89,9 +91,9 @@
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.1.min.js"><\/script>')</script>
   <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/prettify/prettify.js"></script>
+  <script src="/static/js/prettify/prettify.js"></script>
   
   <!-- end scripts-->
   
