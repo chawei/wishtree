@@ -54,7 +54,7 @@
             <div class="image">
               <img src="{{result['user']['avatar']['url']}}">
             </div>
-            <h3>{{result['user']['nickname']}} wished : {{result['title']}}</h3>
+            <h3><span class="name">{{result['user']['nickname']}}</span> wished : {{result['title']}}</h3>
           </div>
           <div class="transparent-bg"></div>
         </div>

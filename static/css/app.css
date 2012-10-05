@@ -84,6 +84,9 @@ body {
     float: left;
     margin-left: 20px;
     font-size: 18px;
+    color: #5f3f0e;
+  }
+  #overview h3 .name {
     color: #ed9b1d;
   }
 
