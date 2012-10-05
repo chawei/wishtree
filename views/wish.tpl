@@ -49,7 +49,7 @@
   </div>
 
   <div id="main">
-    <div class="container">  
+    <div class="container">      
       <header id="overview" class="cf">
         <div class="inner">
           <div class="desc">
@@ -59,6 +59,11 @@
             <h3><span class="name">{{result['user']['nickname']}}</span> wished : {{result['title']}}</h3>
           </div>
           <div class="transparent-bg"></div>
+          
+          <div id="marketing_section">
+            <a class="app-store-badge" href="#"></a>
+            <div class="fb-like" data-href="http://www.facebook.com/pages/Wishtree/412305465492757" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="verdana"></div>
+          </div>
         </div>
       </header>
       
@@ -73,6 +78,8 @@
         </div>
         
         %for photo in result['photoList'] :
+        <div class="timestamp">1 day ago</div>
+        
         <div class="story cf">
           <div class="image">
             <img class ="icon" src="{{photo['treeState']['photoFile']['url']}}">
@@ -88,6 +95,16 @@
   </div>
   
   <!-- JavaScript at the bottom for fast page loading -->
+  
+  <!-- facebook like button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=352349871469776";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -96,25 +113,6 @@
   <script src="/static/js/prettify/prettify.js"></script>
   
   <!-- end scripts-->
-  
-  <!-- If you'd rather pick and choose, comment the above and uncomment what you need below -->
-  <!--script type="text/javascript" src="/js/bootstrap-alert.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-button.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-carousel.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-collapse.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-dropdown.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-modal.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-modal.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-modal.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-popover.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-scrollspy.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-tab.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-tooltip.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-transition.min.js"></script-->
-  <!--script type="text/javascript" src="/js/bootstrap-typeahead.min.js"></script-->
-  <!--script type="text/javascript" src=""></script-->
-  
-  <!-- end scripts -->
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
@@ -122,7 +120,6 @@
   <script type="text/javascript">
   // Use the modernizr.load() function to run polyfills for older browsers.
     Modernizr.load({
-
     });
   </script>
   
