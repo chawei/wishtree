@@ -18,8 +18,8 @@ def send_static(filename):
     return static_file(filename, root='static')
 
 @route("/")
-def hello_world():
-    return "Hello World!"
+def home():
+    return template('home')
 
 @route('/test')
 def test():
