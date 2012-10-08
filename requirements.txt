@@ -1,4 +1,4 @@
-dateutil
+python-dateutil==2.1
 bottle==0.10.11
 gevent==0.13.7
 greenlet==0.4.0
