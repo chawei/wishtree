@@ -10,6 +10,11 @@ body {
   padding: 0;
 }
 
+.wishtitle {
+  float: left;
+  width: 560px;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -87,7 +92,7 @@ body {
     color: #5f3f0e;
     font-family: 'Nunito', Arial, sans-serif !important;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
   }
     #overview h3 .name {
       color: #ed9b1d;
@@ -96,10 +101,10 @@ body {
       font-weight: 700;
     }
 
-    #overview h3 .title {
+    #overview h3 .action {
     font-family: 'Nunito', Arial, sans-serif !important;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 700;
     }
 
   #overview .transparent-bg {
@@ -128,6 +133,7 @@ body {
 .storyline {
   position: absolute;
   top: 125px;
+  width: 620px;
 }
   .storyline .timestamp {
     color: #5f3f0e;

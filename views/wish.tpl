@@ -70,7 +70,9 @@
             <div class="image">
               <img src="{{result['user']['avatar']['url']}}">
             </div>
-            <h3><span class="name">{{result['user']['nickname']}}</span> wished : <span class="title">{{result['title']}}</span></h3>
+            <div class='wishtitle'>
+              <h3><span class="name">{{result['user']['nickname']}}</span><span class="action"> wished : </span>{{result['title']}}</h3>
+            </div>
           </div>
           <div class="transparent-bg"></div>
           
