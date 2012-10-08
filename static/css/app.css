@@ -96,6 +96,10 @@ body {
       font-weight: 700;
     }
 
+    #overview h3 .title {
+      font-weight: 500;
+    }
+
   #overview .transparent-bg {
     position: absolute;
     background: rgb(252, 249, 233);

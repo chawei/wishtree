@@ -13,6 +13,19 @@
   <link rel="stylesheet" href="/css/app.css">
   
   <style>@import url("//fonts.googleapis.com/css?family=Nunito:300normal,400normal,700normal&subset=latin&directory&text=+%2C-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&directory");</style>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35388799-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
 </head>
 <body id="homepage">
   <div class="main_container">

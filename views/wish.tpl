@@ -30,6 +30,20 @@
   <script src="/static/js/modernizr-2.5.3.min.js"></script>
   
   <style>@import url("//fonts.googleapis.com/css?family=Nunito:300normal,400normal,700normal&subset=latin&directory&text=+%2C-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&directory");</style>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35388799-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -56,7 +70,7 @@
             <div class="image">
               <img src="{{result['user']['avatar']['url']}}">
             </div>
-            <h3><span class="name">{{result['user']['nickname']}}</span> wished : {{result['title']}}</h3>
+            <h3><span class="name">{{result['user']['nickname']}}</span> wished : <span class="title">{{result['title']}}</span></h3>
           </div>
           <div class="transparent-bg"></div>
           
@@ -123,14 +137,7 @@
     Modernizr.load({
     });
   </script>
-  
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-  
+
   <!-- A little ie7- magic -->
   <script type="text/javascript"> $(function(){if($.browser.msie&&parseInt($.browser.version,10)===6){$('.row div[class^="span"]:last-child').addClass("last-child");$('[class="span"]').addClass("margin-left-20");$(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");$(":checkbox").addClass("input-checkbox");$('[class^="icon-"], [class=" icon-"]').addClass("icon-sprite");$(".pagination li:first-child a").addClass("pagination-first-child")}}) </script>
 </body>
