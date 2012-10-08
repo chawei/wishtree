@@ -20,6 +20,8 @@
       <section class="left_container">
         <h1 id="logo">Wishtree</h1>
         <h2 class="slogan Nunito-normal-400">Make a wish. Grow your story.</h2>
+        
+        <p class="desc">a brilliant idea of making your own wish stories</p>
       
         <a class="app-store-badge" href="#"></a>
       </section>
@@ -37,6 +39,8 @@
         </div>
       </div>
     </div>
+    
+    <footer class="Nunito-normal-400">© 2012 PT.farm</footer>
   </div>
   
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
