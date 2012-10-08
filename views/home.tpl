@@ -23,7 +23,7 @@
         
         <p class="desc">"a brilliant idea of making your own wish stories."</p>
       
-        <a class="app-store-badge" href="#"></a>
+        <a class="app-store-badge" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
       </section>
     
       <div id="iphone">
