@@ -225,7 +225,8 @@ body {
     opacity: 0.8;
     border-radius: 5px;
     box-shadow: 0px 0px 4px 1px #666;
-    font-weight: bold;
+    font-family: Georgia, Arial, sans-serif;
+    font-style: italic;
   }
 
   #homepage .app-store-badge {

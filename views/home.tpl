@@ -21,7 +21,7 @@
         <h1 id="logo">Wishtree</h1>
         <h2 class="slogan Nunito-normal-400">Make a wish. Grow your story.</h2>
         
-        <p class="desc">a brilliant idea of making your own wish stories</p>
+        <p class="desc">"a brilliant idea of making your own wish stories."</p>
       
         <a class="app-store-badge" href="#"></a>
       </section>
