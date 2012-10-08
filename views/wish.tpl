@@ -78,7 +78,7 @@
         </div>
         
         %for photo in result['photoList'] :
-        <div class="timestamp">1 day ago</div>
+        <div class="timestamp">{{photo['delta']}}</div>
         
         <div class="story cf">
           <div class="image">
@@ -89,6 +89,7 @@
           <h4 class="title">{{photo['description']}}</h4>
         </div>
         %end
+        <div class="timestamp">{{result['delta']}}</div>
       </div>
       
     </div>
