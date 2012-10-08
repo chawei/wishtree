@@ -26,8 +26,23 @@
     
       <div id="iphone">
         <img src="/static/img/wishtree-on-iphone.png" />
+        
+        <div class="slideshow">
+          <div class="slides_container">
+            <div><img title="My Wishes" src="/static/img/home/wishes.jpg" /></div>
+            <div><img title="My Wish" src="/static/img/home/wish.jpg" /></div>
+            <div><img title="News Feed" src="/static/img/home/news_feed.jpg" /></div>
+            <div><img title="Popular Feed" src="/static/img/home/pop_feed.jpg" /></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="/static/js/slides.min.jquery.js"></script>
+  <script src="/static/js/app.js"></script>
 </body>
 </html>

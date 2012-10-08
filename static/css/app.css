@@ -225,7 +225,29 @@ body {
 #iphone {
   float: right;
   margin: 0 40px 0 0;
+  position: relative;
 }
+  #iphone .slideshow {
+    position: absolute;
+    top: 101px;
+    left: 26px;
+  }
+  #iphone .slideshow img {
+    width: 227px;
+  }
+  
+  .slides_container {
+    width: 227px;
+    height: 341px;
+    overflow: hidden;
+  }
+  .slides_container div {
+    width: 227px;
+    height: 341px;
+    display: block;
+  }
+
+/* Misc */
 
 .Nunito-normal-400 {
   font-family: 'Nunito' !important;
