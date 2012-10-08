@@ -97,7 +97,9 @@ body {
     }
 
     #overview h3 .title {
-      font-weight: 500;
+    font-family: 'Nunito', Arial, sans-serif !important;
+    font-style: normal;
+    font-weight: 300;
     }
 
   #overview .transparent-bg {
