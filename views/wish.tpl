@@ -16,7 +16,8 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" type="text/css" href="/css/app.css">
+  <link rel="stylesheet" type="text/css" href="/css/mobile.css">
   <!-- More ideas for your head here: h5bp.com/d/head-Tips -->
   
   <!-- Want to try a different theme?

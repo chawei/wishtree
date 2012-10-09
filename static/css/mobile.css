@@ -1,0 +1,32 @@
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  .navbar .container {
+    margin: 6px;
+  }
+  
+  #main {
+  }
+  
+  #overview .inner {
+    width: 460px;
+  }
+  #overview .desc {
+    margin: 20px 0 0 13px;
+  }
+  
+  .wishtitle {
+    width: 320px;
+  }
+  
+  .storyline {
+    width: 372px;
+    left: 10px;
+  }
+  
+  .story {
+    padding: 20px;
+  }
+    .story .uploaded-img {
+      width: 332px;
+    }
+  
+}
