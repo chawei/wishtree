@@ -1,11 +1,11 @@
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   .navbar .container {
     margin: 6px auto;
-    width: 330px;
+    width: 310px;
   }
   
   #main .container {
-    width: 360px;
+    width: 320px;
   }
   
   #overview {
@@ -15,7 +15,7 @@
       width: 460px;
     }
     #overview .desc {
-      margin: 20px 0 0 18px;
+      margin: 20px 0 0 10px;
     }
   
     #overview .wishtitle {
