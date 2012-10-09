@@ -36,6 +36,7 @@
         
         <p class="desc">"a brilliant idea of making your own wish stories."</p>
       
+        <div class="fb-like" data-href="http://www.facebook.com/pages/Wishtree/412305465492757" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="verdana"></div>
         <a class="app-store-badge" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
       </section>
     
@@ -61,5 +62,15 @@
   <script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.1.min.js"><\/script>')</script>
   <script src="/static/js/slides.min.jquery.js"></script>
   <script src="/static/js/app.js"></script>
+  
+  <!-- facebook like button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=352349871469776";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

@@ -251,6 +251,12 @@ body {
     bottom: 7px;
     right: 0px;
   }
+  
+  #homepage .fb-like {
+    position: absolute;
+    right: 0px;
+    bottom: 65px;
+  }
 
 
 

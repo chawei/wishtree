@@ -79,7 +79,7 @@
           
           <div id="marketing_section">
             <a class="app-store-badge" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
-            <div class="fb-like" data-href="http://www.facebook.com/pages/Wishtree/412305465492757" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="verdana"></div>
+            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div>
           </div>
         </div>
       </header>
