@@ -1,14 +1,17 @@
 import os
 import json,httplib,urllib
 
-from bottle import debug, route, run ,template
+from bottle import debug, route, run ,template, redirect
 
 from bottle import static_file
 
 import dateutil.parser
 import math
 
-debug(True)
+#debug(True)
+
+APP_ID  = 'O6QXaSCA8Jocb6zHIX7fIunZSw3bfXpChurcyL8A'
+API_KEY = 'lv2P4rF6JrbFsN1Q58IqQ0KeVVY5va0z29u1iFyW'
 
 @route('/images/<filename:re:.*\.png>')
 def send_image(filename):
@@ -58,35 +61,46 @@ def timeDeltaString(t1,t2):
 
 @route('/wish/<objectId>')
 def wishLine(objectId):
-    connection = httplib.HTTPSConnection('api.parse.com', 443)
-    params = urllib.urlencode({"include":"photoList,user"})
-    connection.connect()
-    connection.request('GET', '/1/classes/EVENT/%s?%s' % (objectId,params), '', {
-           "X-Parse-Application-Id": "O6QXaSCA8Jocb6zHIX7fIunZSw3bfXpChurcyL8A",
-           "X-Parse-REST-API-Key": "lv2P4rF6JrbFsN1Q58IqQ0KeVVY5va0z29u1iFyW"
-         })
-    jsonstring = connection.getresponse().read()
-    result = json.loads(jsonstring)
-    result['description'] = result['description'].replace(u'\n',u'<br />')
-    shotDate1 = dateutil.parser.parse(result['shotDate']['iso'])
-    for photo in result['photoList']:
-        photo['description'] = photo['description'].replace(u'\n',u'<br />')
-        shotDate2 = dateutil.parser.parse(photo['shotDate']['iso'])
-        photo['delta'] = timeDeltaString(shotDate1,shotDate2)
-        shotDate1 = shotDate2
+    try:
+        #connect to parse
+        connection = httplib.HTTPSConnection('api.parse.com', 443)
+        params = urllib.urlencode({"include":"photoList,user"})
+        connection.connect()
+        connection.request('GET', '/1/classes/EVENT/%s?%s' % (objectId,params), '', {
+               "X-Parse-Application-Id": APP_ID,
+               "X-Parse-REST-API-Key": API_KEY
+             })
+        response = connection.getresponse();
 
-    if 'achieved' in result:
-        result['delta'] = 'The end.'
-    else:
-        result['delta'] = 'To be continued...'
-        
-    
+        #if no data, redirect to homepage
+        if response.status != 200:
+            return redirect('/')
 
-    # f = open('a.json','w')
-    # f.write(jsonstring);
-    # f.close()
+        jsonstring = response.read()
+        result = json.loads(jsonstring)
 
-    return template('wish', result=result)
+        #change the line break symbol
+        result['description'] = result['description'].replace(u'\n',u'<br />')
+
+        #calculate date delta
+        shotDate1 = dateutil.parser.parse(result['shotDate']['iso'])
+        for photo in result['photoList']:
+            photo['description'] = photo['description'].replace(u'\n',u'<br />')
+            shotDate2 = dateutil.parser.parse(photo['shotDate']['iso'])
+            photo['delta'] = timeDeltaString(shotDate1,shotDate2)
+            shotDate1 = shotDate2
+
+        #check which word used in the end of line.
+        if 'achieved' in result:
+            result['delta'] = 'The end.'
+        else:
+            result['delta'] = 'To be continued...'
+
+        #render it
+        return template('wish', result=result)
+    except :
+        return redirect('/')
+
 
 
 @route('/SJW8Fk8HkqBQ618jL0lRXmR9uN0uY39E/appstore')
@@ -95,8 +109,8 @@ def count():
     params = urllib.urlencode({"count":1,"limit":0})
     connection.connect()
     connection.request('GET', '/1/users?%s' % params, '', {
-       "X-Parse-Application-Id": "O6QXaSCA8Jocb6zHIX7fIunZSw3bfXpChurcyL8A",
-       "X-Parse-REST-API-Key": "lv2P4rF6JrbFsN1Q58IqQ0KeVVY5va0z29u1iFyW"
+       "X-Parse-Application-Id": APP_ID,
+       "X-Parse-REST-API-Key": API_KEY
      })
     result = json.loads(connection.getresponse().read())
     return '%d users!' % result['count']
