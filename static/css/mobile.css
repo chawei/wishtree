@@ -9,27 +9,29 @@
   }
   
   #overview {
-    margin: 0 0 20px 0px;
+    
   }  
     #overview .inner {
       width: 460px;
+      height: 80px;
     }
     #overview .desc {
-      margin: 20px 0 0 10px;
+      margin: 15px 0 0 10px;
     }
   
     #overview .wishtitle {
-      width: 260px;
+      width: 270px;
     }
     #overview h3 {
-      font-size: 18px;
+      font-size: 15px;
+      margin-left: 10px;
     }
   
   .storyline {
     width: 320px;
     margin: auto;
     position: static;
-    padding: 125px 0 10px;
+    padding: 85px 0 10px;
   }
   
   .story {
@@ -37,6 +39,18 @@
   }
     .story .uploaded-img {
       width: 280px;
+    }
+    .story .title {
+      padding-top: 3px;
+      padding-bottom: 0px;
+      font-size: 15px;
+    }
+    .storyline .timestamp{
+      font-size: 15px;
+
+    }
+    .story .icon {
+      width: 26px;
     }
   
 }
