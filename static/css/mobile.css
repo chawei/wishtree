@@ -1,7 +1,7 @@
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
   .navbar .container {
     margin: 6px auto;
-    width: 365px;
+    width: 330px;
   }
   
   #main .container {
@@ -9,13 +9,13 @@
   }
   
   #overview {
-    margin: 0 0 20px -13px;
+    margin: 0 0 20px 0px;
   }  
     #overview .inner {
       width: 460px;
     }
     #overview .desc {
-      margin: 20px 0 0 13px;
+      margin: 20px 0 0 18px;
     }
   
     #overview .wishtitle {
@@ -28,6 +28,8 @@
   .storyline {
     width: 320px;
     margin: auto;
+    position: static;
+    padding: 125px 0 0;
   }
   
   .story {
