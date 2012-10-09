@@ -67,8 +67,10 @@ def wishLine(objectId):
          })
     jsonstring = connection.getresponse().read()
     result = json.loads(jsonstring)
+    result['description'] = result['description'].replace(u'\n',u'<br />')
     shotDate1 = dateutil.parser.parse(result['shotDate']['iso'])
     for photo in result['photoList']:
+        photo['description'] = photo['description'].replace(u'\n',u'<br />')
         shotDate2 = dateutil.parser.parse(photo['shotDate']['iso'])
         photo['delta'] = timeDeltaString(shotDate1,shotDate2)
         shotDate1 = shotDate2

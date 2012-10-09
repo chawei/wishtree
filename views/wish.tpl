@@ -91,7 +91,7 @@
             <img class ="uploaded-img" src="{{result['image']['url']}}">
           </div>
           
-          <h4 class="title">{{result['description']}}</h4>
+          <h4 class="title">{{!result['description']}}</h4>
         </div>
         
         %for photo in result['photoList'] :
@@ -103,7 +103,7 @@
             <img class ="uploaded-img" src="{{photo['image']['url']}}">
           </div>
           
-          <h4 class="title">{{photo['description']}}</h4>
+          <h4 class="title">{{!photo['description']}}</h4>
         </div>
         %end
         <div class="timestamp">{{result['delta']}}</div>
