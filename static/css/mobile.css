@@ -18,12 +18,15 @@
       margin: 20px 0 0 13px;
     }
   
-  .wishtitle {
-    width: 320px;
-  }
+    #overview .wishtitle {
+      width: 260px;
+    }
+    #overview h3 {
+      font-size: 18px;
+    }
   
   .storyline {
-    width: 360px;
+    width: 320px;
     margin: auto;
   }
   
@@ -31,7 +34,7 @@
     padding: 20px;
   }
     .story .uploaded-img {
-      width: 320px;
+      width: 280px;
     }
   
 }
