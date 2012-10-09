@@ -39,6 +39,7 @@
   }
     .story .uploaded-img {
       width: 280px;
+      border-radius: 3px;
     }
     .story .title {
       padding-top: 3px;
