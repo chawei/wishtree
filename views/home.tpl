@@ -34,7 +34,10 @@
         <h1 id="logo">Wishtree</h1>
         <h2 class="slogan Nunito-normal-400">Make a wish. Grow your story.</h2>
         
-        <p class="desc">"a brilliant idea of making your own wish stories."</p>
+        <div class="desc">
+          <p>"a brilliant idea of making your own wish stories."</p>
+          <p>"It's a handy app and it's fun! The whole interface works quite smoothly. Can't wait to invite more people to use it and see what my friends do to make a wish come true." <span class="reviewer">- Very well designed ★★★★★ by Econ D</span></p>
+        </div>
       
         <div class="fb-like" data-href="http://www.facebook.com/pages/Wishtree/412305465492757" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true" data-font="verdana"></div>
         <a class="app-store-badge" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
@@ -69,7 +72,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=352349871469776";
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=438745949501972";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 </body>
