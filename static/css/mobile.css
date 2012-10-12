@@ -53,5 +53,10 @@
     .story .icon {
       width: 26px;
     }
+   
+  #bottom_container .marketing_section {
+    display: block;
+    padding: 0 0 30px;
+  }
   
 }

@@ -116,19 +116,23 @@ body {
     z-index: 5;
   }
 
-#marketing_section {
-  position: absolute;
-  right: -90px;
-  z-index: 10;
-  top: 20px;
-  overflow: hidden;
-}
-  #marketing_section .app-store-badge {
-    background: url('/static/img/app-store-badge-small.png') 0 0 no-repeat;
-    height: 50px;
-    width: 150px;
-    text-decoration: none;
-    display: block;
+  #overview .marketing_section {
+    position: absolute;
+    right: -90px;
+    z-index: 10;
+    top: 20px;
+    overflow: hidden;
+  }
+    .marketing_section .app-store-badge {
+      background: url('/static/img/app-store-badge-small.png') 0 0 no-repeat;
+      height: 50px;
+      width: 150px;
+      text-decoration: none;
+      display: block;
+    }
+  
+  #bottom_container .marketing_section {
+    display: none;
   }
 
 .storyline {

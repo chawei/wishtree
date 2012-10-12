@@ -76,9 +76,8 @@
             </div>
           </div>
           <div class="transparent-bg"></div>
-          
-          <div id="marketing_section">
-            <a class="app-store-badge" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
+          <div class="marketing_section">
+            <a class="app-store-badge" target="_blank" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
             <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div>
           </div>
         </div>
@@ -107,6 +106,13 @@
         </div>
         %end
         <div class="timestamp">{{result['delta']}}</div>
+      </div>
+      
+      <div id="bottom_container">
+        <div class="marketing_section">
+          <a class="app-store-badge" target="_blank" href="http://itunes.apple.com/us/app/wishtree-record-every-memorized/id554099143?ls=1&mt=8"></a>
+          <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div>
+        </div>
       </div>
       
     </div>
